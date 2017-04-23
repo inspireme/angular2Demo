@@ -14,6 +14,8 @@ import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { KeyupComponent } from './keyup/keyup.component';
+import { LittleTourComponent } from './little-tour/little-tour.component';
 
 @NgModule({
   imports: [
@@ -44,7 +46,9 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    KeyupComponent,
+    LittleTourComponent
   ],
   providers: [
     HeroService

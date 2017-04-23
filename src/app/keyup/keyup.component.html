@@ -1,0 +1,16 @@
+
+<div id="keyup-component">
+	<h4>keyup</h4>
+	<input (keyup)="onKey($event)">
+	<p>{{values1}}</p>
+
+	<h4>keyup2</h4>
+	<!-- <input #box (keyup)="0"> -->
+	<input #box (keyup)="onKey2(box.value)">
+	<p>{{values2}}</p>
+
+	<h4>enter</h4>
+	<input #box2 (keyup.enter)="update(box2.value)" (blur)="update(box2.value)">
+	<p>{{values3}}</p>
+
+</div>
