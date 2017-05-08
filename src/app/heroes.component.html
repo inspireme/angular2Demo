@@ -6,7 +6,7 @@
 </div>
 
 <ul class="heroes">
-	<li *ngFor="let hero of heroes"
+	<li *ngFor="let hero of heroes trackBy: trackByHeroes"
 		[class.selected]="hero === selectedHero" (click)="onSelect(hero)">
 		<span class="badge">{{hero.id}}</span> {{hero.name}}
 		<button class="delete"
@@ -16,4 +16,14 @@
 <div *ngIf="selectedHero">
 	<h2>{{selectedHero.name | uppercase}} is my hero</h2>
 	<button (click)="gotoDetail()">View Details</button>
+</div>
+
+<div style="border: 1px solid #000000;" *ngIf="selectedHero"
+	[ngSwitch]="selectedHero.id">
+
+	<div *ngSwitchCase="'12'">Are you choosed {{selectedHero.name | uppercase}}?</div>
+	<div *ngSwitchCase="'11'">Are you as confused as {{selectedHero.name}}?</div>
+	<div *ngSwitchCase="'13'">here is the json data ===>>>  {{selectedHero | json}}</div>
+	<app-hero-form *ngSwitchDefault></app-hero-form>
+
 </div>

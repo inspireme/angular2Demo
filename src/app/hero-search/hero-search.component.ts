@@ -20,6 +20,7 @@ import { Hero } from '../hero';
 })
 export class HeroSearchComponent implements OnInit {
 
+  fontSizePx = 3;
   heroes: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 

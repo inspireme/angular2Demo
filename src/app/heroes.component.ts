@@ -54,5 +54,9 @@ export class HeroesComponent implements OnInit {
       });
   }
 
+  trackByHeroes(index: number, hero: Hero): number {
+     return hero.id;
+  }
+
 }
 

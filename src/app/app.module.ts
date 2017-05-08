@@ -17,6 +17,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { KeyupComponent } from './keyup/keyup.component';
 import { LittleTourComponent } from './little-tour/little-tour.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { SizerComponent } from './sizer.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     HeroSearchComponent,
     KeyupComponent,
     LittleTourComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    SizerComponent
   ],
   providers: [
     HeroService

@@ -1,4 +1,4 @@
-import { NewHero } from '../NewHero';
+import { NewHero } from '../newhero';
 import { Component, OnInit } from '@angular/core';
 
 

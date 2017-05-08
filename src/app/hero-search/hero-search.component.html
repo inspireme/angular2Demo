@@ -1,10 +1,18 @@
 <div id="search-component">
-  <h4>Hero Search</h4>
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-  <div>
-    <div *ngFor="let hero of heroes | async"
-         (click)="gotoDetail(hero)" class="search-result" >
-      {{hero.name}}
-    </div>
-  </div>
+	<h4>Hero Search</h4>
+	<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+	<div>
+		<div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)"
+			class="search-result">{{hero.name}}</div>
+	</div>
+</div>
+
+
+<div style="border: 1px solid #000000;">
+	<my-sizer [(size)]="fontSizePx"></my-sizer>
+	<my-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></my-sizer>
+	<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+	<input [value]="fontSizePx" (input)="fontSizePx=$event.target.value">
+	<input [ngModel]="fontSizePx"
+		(ngModelChange)="fontSizePx=$event">
 </div>
